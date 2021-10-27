@@ -5,17 +5,11 @@ import moviepy.editor
 from pyunpack import Archive
 import requests
 import PIL
-
 import re
-import glob
-import shutil, time
 import os
-from tqdm import tqdm as tbar
 from PIL import Image, ImageFont, ImageOps, ImageDraw
-import easygui
 from tkinter import Tk
 import tkinter as tk
-from shutil import copyfile
 import streamlit as st
 import streamlit.components.v1 as stc
 
@@ -75,10 +69,6 @@ def string_image(string, font_path=None):
     c_box = ImageOps.invert(image).getbbox()
     image = image.crop(c_box)
     return image
-
-
-#delete_check_list_file = ["clip_audio.mp3","output.mp4","ffmpeg_compile_log.txt","output_with_audio.mp4","ffmpeg.7z"]
-#delete_check_list_path = ["\\output","\\data","\\ffmpeg","\\ffmpeg_initial","\\fonts","\\iteration","\\Input"]
 
 
     # gets up to date list of files in directory
