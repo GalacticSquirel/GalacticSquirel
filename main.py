@@ -8,8 +8,6 @@ import PIL
 import re
 import os
 from PIL import Image, ImageFont, ImageOps, ImageDraw
-from tkinter import Tk
-import tkinter as tk
 import streamlit as st
 import streamlit.components.v1 as stc
 
