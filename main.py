@@ -5,7 +5,7 @@ import moviepy.editor
 from pyunpack import Archive
 import requests
 import PIL
-import cv2
+
 import re
 import glob
 import shutil, time
@@ -16,9 +16,9 @@ import easygui
 from tkinter import Tk
 import tkinter as tk
 from shutil import copyfile
-
 import streamlit as st
 import streamlit.components.v1 as stc
+
 global directory_path
 global images_save_type
 global file_padding
@@ -156,8 +156,7 @@ def font_get():
 def load_image(image_file):
     img = Image.open(image_file)
     return img
-delete_images_in_folder("input")
-delete_images_in_folder("output")
+
 if mode == "Single Image":
     PIL.Image.MAX_IMAGE_PIXELS = ((FIXED_NEW_WIDTH * FIXED_NEW_WIDTH) * (FIXED_NEW_WIDTH * FIXED_NEW_WIDTH)) * ((FIXED_NEW_WIDTH * FIXED_NEW_WIDTH) * (FIXED_NEW_WIDTH * FIXED_NEW_WIDTH))
     
